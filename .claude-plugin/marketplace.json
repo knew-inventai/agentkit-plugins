@@ -18,6 +18,12 @@
       "version": "1.0.0"
     },
     {
+      "name": "github",
+      "source": "./github",
+      "description": "GitHub 官方 Plugin，透過 MCP 提供完整 GitHub API：建立 issues、管理 PR、code review、搜尋 repos，直接在 Claude Code 中操作",
+      "version": "1.0.0"
+    },
+    {
       "name": "plugin-dev",
       "source": "./plugin-dev",
       "description": "Claude Code plugin 開發工具包，提供 hooks、MCP 整合、plugin 結構、slash commands、agents、skills 七大主題的專家指引",
