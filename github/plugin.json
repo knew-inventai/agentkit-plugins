@@ -1,0 +1,22 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "GitHub 官方 Plugin，透過 MCP 提供完整 GitHub API：建立 issues、管理 PR、code review、搜尋 repos，直接在 Claude Code 中操作",
+  "author": { "name": "GitHub" },
+  "license": "MIT",
+  "_agentkit": {
+    "type": "plugin",
+    "tags": ["github", "official", "mcp", "issues", "pr", "code-review"],
+    "compatible": ["claude"]
+  },
+  "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
+  "mcp": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    }
+  }
+}

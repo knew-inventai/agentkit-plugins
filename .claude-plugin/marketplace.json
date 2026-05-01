@@ -1,0 +1,27 @@
+{
+  "name": "agentkit-plugins",
+  "owner": {
+    "name": "AgentKit"
+  },
+  "description": "Inventai Plugin 集合",
+  "plugins": [
+    {
+      "name": "conventional-commits",
+      "source": "./conventional-commits",
+      "description": "根據 git diff 或描述自動產生符合 Conventional Commits 規範的 commit message",
+      "version": "1.0.0"
+    },
+    {
+      "name": "env-checker",
+      "source": "./env-checker",
+      "description": "掃描程式碼中的 hardcoded secrets、API keys 與敏感環境變數，在提交前提早發現安全問題",
+      "version": "1.0.0"
+    },
+    {
+      "name": "plugin-dev",
+      "source": "./plugin-dev",
+      "description": "Claude Code plugin 開發工具包，提供 hooks、MCP 整合、plugin 結構、slash commands、agents、skills 七大主題的專家指引",
+      "version": "0.1.0"
+    }
+  ]
+}

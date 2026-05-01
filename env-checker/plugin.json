@@ -1,0 +1,19 @@
+{
+  "name": "env-checker",
+  "version": "1.0.0",
+  "description": "掃描程式碼中的 hardcoded secrets、API keys 與敏感環境變數，在提交前提早發現安全問題",
+  "author": { "name": "knew-inventai", "email": "knew@chtinventai.com" },
+  "license": "MIT",
+  "_agentkit": {
+    "type": "plugin",
+    "tags": ["security", "secrets", "env", "pre-commit"],
+    "compatible": ["claude"]
+  },
+  "commands": [
+    {
+      "name": "check-secrets",
+      "description": "掃描目前工作目錄，找出可能的 hardcoded secrets 或 API keys",
+      "prompt": "請掃描目前專案的程式碼，找出所有可能的 hardcoded secrets，包含：\n1. API keys（格式如 sk-xxx、ghp_xxx、AKIA 開頭等）\n2. 密碼（password=、passwd= 等賦值）\n3. 私鑰或憑證（BEGIN PRIVATE KEY 等）\n4. 硬編碼的 URL 含認證資訊（https://user:pass@...）\n\n對每個發現的問題：\n- 指出檔案路徑與行號\n- 說明風險等級（高/中/低）\n- 建議改用環境變數的方式\n\n忽略 .env.example、測試用假資料（如 test-key-xxx）、以及 node_modules/。"
+    }
+  ]
+}

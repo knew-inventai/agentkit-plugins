@@ -1,0 +1,14 @@
+{
+  "name": "plugin-dev",
+  "version": "0.1.0",
+  "description": "Claude Code plugin 開發工具包，提供 hooks、MCP 整合、plugin 結構、slash commands、agents、skills 七大主題的專家指引",
+  "author": { "name": "daisy@anthropic.com" },
+  "license": "MIT",
+  "_agentkit": {
+    "type": "plugin",
+    "tags": ["plugin", "development", "claude-code", "toolkit", "hooks", "mcp"],
+    "compatible": ["claude"]
+  },
+  "source": "https://github.com/anthropics/claude-code/tree/main/plugins/plugin-dev",
+  "install_command": "/plugin install plugin-dev@claude-code-marketplace"
+}
