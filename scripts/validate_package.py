@@ -77,6 +77,37 @@ def validate(pkg_dir: Path) -> list[str]:
             errors.append(
                 f"{pkg_dir}: missing body file '{BODY_FILE[pkg_type]}' for type '{pkg_type}'"
             )
+    elif pkg_type == "plugin":
+        # Plugin structure validation
+        claude_plugin_json = pkg_dir / ".claude-plugin" / "plugin.json"
+        if not claude_plugin_json.exists():
+            errors.append(f"{pkg_dir}: missing .claude-plugin/plugin.json")
+        else:
+            try:
+                cp = json.loads(claude_plugin_json.read_text(encoding="utf-8"))
+                for field in ("name", "version", "description", "author"):
+                    if field not in cp:
+                        errors.append(
+                            f"{claude_plugin_json}: missing required field '{field}'"
+                        )
+            except json.JSONDecodeError as e:
+                errors.append(f"{claude_plugin_json}: invalid JSON — {e}")
+
+        commands_dir = pkg_dir / "commands"
+        has_commands = commands_dir.is_dir() and any(commands_dir.glob("*.md"))
+        has_mcp = (pkg_dir / ".mcp.json").exists()
+        has_skills = (pkg_dir / "skills").is_dir() and any((pkg_dir / "skills").iterdir())
+        if not (has_commands or has_mcp or has_skills):
+            errors.append(
+                f"{pkg_dir}: plugin must have at least one of: "
+                "commands/*.md, .mcp.json, skills/"
+            )
+
+        if "commands" in m:
+            errors.append(
+                f"{manifest_path}: remove 'commands' array from plugin.json "
+                "(use commands/*.md files instead)"
+            )
 
     # _agentkit.tags: non-empty list
     tags = agentkit.get("tags", [])

@@ -1,32 +1,14 @@
 {
   "_agentkit": {
-    "compatible": [
-      "claude"
-    ],
-    "tags": [
-      "github",
-      "official",
-      "mcp",
-      "issues",
-      "pr",
-      "code-review"
-    ],
+    "compatible": ["claude"],
+    "tags": ["github", "official", "mcp", "issues", "pr", "code-review"],
     "type": "plugin"
   },
   "author": {
     "name": "GitHub"
   },
-  "description": "GitHub \u5b98\u65b9 Plugin\uff0c\u900f\u904e MCP \u63d0\u4f9b\u5b8c\u6574 GitHub API\uff1a\u5efa\u7acb issues\u3001\u7ba1\u7406 PR\u3001code review\u3001\u641c\u5c0b repos\uff0c\u76f4\u63a5\u5728 Claude Code \u4e2d\u64cd\u4f5c",
+  "description": "GitHub 官方 Plugin，透過 MCP 提供完整 GitHub API：建立 issues、管理 PR、code review、搜尋 repos，直接在 Claude Code 中操作",
   "license": "MIT",
-  "mcp": {
-    "github": {
-      "headers": {
-        "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
-      },
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/"
-    }
-  },
   "name": "github",
   "source": "https://github.com/anthropics/claude-plugins-official/tree/main/external_plugins/github",
   "version": "1.0.0"
