@@ -33,8 +33,8 @@ export GITHUB_PERSONAL_ACCESS_TOKEN=<your-token>
 ## 取得 Token
 
 1. 前往 https://github.com/settings/tokens
-2. 建立 Fine-grained Token，選擇需要的 repository 權限
-3. 將 token 填入 `GITHUB_PERSONAL_ACCESS_TOKEN`
+1. 建立 Fine-grained Token，選擇需要的 repository 權限
+1. 將 token 填入 `GITHUB_PERSONAL_ACCESS_TOKEN`
 
 ## 可用功能
 

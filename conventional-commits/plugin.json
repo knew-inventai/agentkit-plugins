@@ -1,19 +1,29 @@
 {
-  "name": "conventional-commits",
-  "version": "1.0.0",
-  "description": "根據 git diff 或描述自動產生符合 Conventional Commits 規範的 commit message",
-  "author": { "name": "knew-inventai", "email": "knew@chtinventai.com" },
-  "license": "MIT",
   "_agentkit": {
-    "type": "plugin",
-    "tags": ["git", "commit", "conventional-commits", "changelog"],
-    "compatible": ["claude"]
+    "compatible": [
+      "claude"
+    ],
+    "tags": [
+      "git",
+      "commit",
+      "conventional-commits",
+      "changelog"
+    ],
+    "type": "plugin"
+  },
+  "author": {
+    "email": "knew@chtinventai.com",
+    "name": "knew-inventai"
   },
   "commands": [
     {
+      "description": "\u6839\u64da\u76ee\u524d\u7684 git diff \u7522\u751f Conventional Commits \u683c\u5f0f\u7684 commit message",
       "name": "commit",
-      "description": "根據目前的 git diff 產生 Conventional Commits 格式的 commit message",
-      "prompt": "請執行 `git diff --staged` 取得目前暫存的變更，然後根據以下規則產生一個 commit message：\n\n**格式：**\n```\n<type>(<scope>): <description>\n\n[optional body]\n\n[optional footer]\n```\n\n**type 選項：**\n- feat：新功能\n- fix：修正 bug\n- docs：文件變更\n- style：格式調整（不影響邏輯）\n- refactor：重構（非新功能也非 bug 修正）\n- test：新增或修改測試\n- chore：建置流程、依賴更新等\n- perf：效能改善\n- ci：CI 設定變更\n\n**規則：**\n- description 使用英文、祈使句、小寫開頭、不加句號\n- scope 為受影響的模組名稱（可省略）\n- 如有 breaking change，在 footer 加 `BREAKING CHANGE: 說明`\n- body 說明「為什麼」而非「做了什麼」\n\n產生後請直接顯示完整的 commit message，讓使用者確認後可直接使用。"
+      "prompt": "\u8acb\u57f7\u884c `git diff --staged` \u53d6\u5f97\u76ee\u524d\u66ab\u5b58\u7684\u8b8a\u66f4\uff0c\u7136\u5f8c\u6839\u64da\u4ee5\u4e0b\u898f\u5247\u7522\u751f\u4e00\u500b commit message\uff1a\n\n**\u683c\u5f0f\uff1a**\n```\n<type>(<scope>): <description>\n\n[optional body]\n\n[optional footer]\n```\n\n**type \u9078\u9805\uff1a**\n- feat\uff1a\u65b0\u529f\u80fd\n- fix\uff1a\u4fee\u6b63 bug\n- docs\uff1a\u6587\u4ef6\u8b8a\u66f4\n- style\uff1a\u683c\u5f0f\u8abf\u6574\uff08\u4e0d\u5f71\u97ff\u908f\u8f2f\uff09\n- refactor\uff1a\u91cd\u69cb\uff08\u975e\u65b0\u529f\u80fd\u4e5f\u975e bug \u4fee\u6b63\uff09\n- test\uff1a\u65b0\u589e\u6216\u4fee\u6539\u6e2c\u8a66\n- chore\uff1a\u5efa\u7f6e\u6d41\u7a0b\u3001\u4f9d\u8cf4\u66f4\u65b0\u7b49\n- perf\uff1a\u6548\u80fd\u6539\u5584\n- ci\uff1aCI \u8a2d\u5b9a\u8b8a\u66f4\n\n**\u898f\u5247\uff1a**\n- description \u4f7f\u7528\u82f1\u6587\u3001\u7948\u4f7f\u53e5\u3001\u5c0f\u5beb\u958b\u982d\u3001\u4e0d\u52a0\u53e5\u865f\n- scope \u70ba\u53d7\u5f71\u97ff\u7684\u6a21\u7d44\u540d\u7a31\uff08\u53ef\u7701\u7565\uff09\n- \u5982\u6709 breaking change\uff0c\u5728 footer \u52a0 `BREAKING CHANGE: \u8aaa\u660e`\n- body \u8aaa\u660e\u300c\u70ba\u4ec0\u9ebc\u300d\u800c\u975e\u300c\u505a\u4e86\u4ec0\u9ebc\u300d\n\n\u7522\u751f\u5f8c\u8acb\u76f4\u63a5\u986f\u793a\u5b8c\u6574\u7684 commit message\uff0c\u8b93\u4f7f\u7528\u8005\u78ba\u8a8d\u5f8c\u53ef\u76f4\u63a5\u4f7f\u7528\u3002"
     }
-  ]
+  ],
+  "description": "\u6839\u64da git diff \u6216\u63cf\u8ff0\u81ea\u52d5\u7522\u751f\u7b26\u5408 Conventional Commits \u898f\u7bc4\u7684 commit message",
+  "license": "MIT",
+  "name": "conventional-commits",
+  "version": "1.0.0"
 }

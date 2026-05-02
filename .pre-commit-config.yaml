@@ -15,6 +15,7 @@ repos:
         args: [--fix=lf]
       - id: check-merge-conflict
       - id: detect-private-key
+        exclude: ^env-checker/  # env-checker docs mention key patterns as examples
 
   # Markdown formatter
   - repo: https://github.com/executablebooks/mdformat
@@ -42,3 +43,4 @@ repos:
         pass_filenames: true
         # Only trigger when files inside a package subdirectory change
         files: ^[^./][^/]*/
+        exclude: ^scripts/
