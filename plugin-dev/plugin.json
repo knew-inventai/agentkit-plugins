@@ -1,7 +1,16 @@
 {
   "_agentkit": {
-    "compatible": ["claude"],
-    "tags": ["plugin", "development", "claude-code", "toolkit", "hooks", "mcp"],
+    "compatible": [
+      "claude"
+    ],
+    "tags": [
+      "plugin",
+      "development",
+      "claude-code",
+      "toolkit",
+      "hooks",
+      "mcp"
+    ],
     "type": "plugin"
   },
   "author": {

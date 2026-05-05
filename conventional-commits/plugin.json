@@ -1,7 +1,14 @@
 {
   "_agentkit": {
-    "compatible": ["claude"],
-    "tags": ["git", "commit", "conventional-commits", "changelog"],
+    "compatible": [
+      "claude"
+    ],
+    "tags": [
+      "git",
+      "commit",
+      "conventional-commits",
+      "changelog"
+    ],
     "type": "plugin"
   },
   "author": {

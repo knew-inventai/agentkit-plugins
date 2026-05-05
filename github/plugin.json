@@ -1,7 +1,16 @@
 {
   "_agentkit": {
-    "compatible": ["claude"],
-    "tags": ["github", "official", "mcp", "issues", "pr", "code-review"],
+    "compatible": [
+      "claude"
+    ],
+    "tags": [
+      "github",
+      "official",
+      "mcp",
+      "issues",
+      "pr",
+      "code-review"
+    ],
     "type": "plugin"
   },
   "author": {

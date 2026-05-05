@@ -1,9 +1,9 @@
 {
-  "name": "conventional-commits",
-  "description": "根據 git diff 或描述自動產生符合 Conventional Commits 規範的 commit message",
-  "version": "1.0.0",
   "author": {
-    "name": "knew-inventai",
-    "email": "knew@chtinventai.com"
-  }
+    "email": "knew@chtinventai.com",
+    "name": "knew-inventai"
+  },
+  "description": "根據 git diff 或描述自動產生符合 Conventional Commits 規範的 commit message",
+  "name": "conventional-commits",
+  "version": "1.0.0"
 }

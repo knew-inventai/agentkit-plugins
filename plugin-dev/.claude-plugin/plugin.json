@@ -1,8 +1,8 @@
 {
-  "name": "plugin-dev",
-  "description": "Claude Code plugin 開發工具包，提供 hooks、MCP 整合、plugin 結構、slash commands、agents、skills 七大主題的專家指引",
-  "version": "0.1.0",
   "author": {
     "name": "daisy@anthropic.com"
-  }
+  },
+  "description": "Claude Code plugin 開發工具包，提供 hooks、MCP 整合、plugin 結構、slash commands、agents、skills 七大主題的專家指引",
+  "name": "plugin-dev",
+  "version": "0.1.0"
 }

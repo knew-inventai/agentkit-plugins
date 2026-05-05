@@ -1,8 +1,8 @@
 {
-  "name": "github",
-  "description": "GitHub 官方 Plugin，透過 MCP 提供完整 GitHub API：建立 issues、管理 PR、code review、搜尋 repos，直接在 Claude Code 中操作",
-  "version": "1.0.0",
   "author": {
     "name": "GitHub"
-  }
+  },
+  "description": "GitHub 官方 Plugin，透過 MCP 提供完整 GitHub API：建立 issues、管理 PR、code review、搜尋 repos，直接在 Claude Code 中操作",
+  "name": "github",
+  "version": "1.0.0"
 }

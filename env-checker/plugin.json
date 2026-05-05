@@ -1,7 +1,14 @@
 {
   "_agentkit": {
-    "compatible": ["claude"],
-    "tags": ["security", "secrets", "env", "pre-commit"],
+    "compatible": [
+      "claude"
+    ],
+    "tags": [
+      "security",
+      "secrets",
+      "env",
+      "pre-commit"
+    ],
     "type": "plugin"
   },
   "author": {

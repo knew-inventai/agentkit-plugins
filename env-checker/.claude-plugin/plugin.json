@@ -1,9 +1,9 @@
 {
-  "name": "env-checker",
-  "description": "掃描程式碼中的 hardcoded secrets、API keys 與敏感環境變數，在提交前提早發現安全問題",
-  "version": "1.0.0",
   "author": {
-    "name": "knew-inventai",
-    "email": "knew@chtinventai.com"
-  }
+    "email": "knew@chtinventai.com",
+    "name": "knew-inventai"
+  },
+  "description": "掃描程式碼中的 hardcoded secrets、API keys 與敏感環境變數，在提交前提早發現安全問題",
+  "name": "env-checker",
+  "version": "1.0.0"
 }
